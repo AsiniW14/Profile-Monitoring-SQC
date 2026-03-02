@@ -12,18 +12,18 @@ The code simulates a two-phase monitoring approach to ensure process stability a
 
 Features
 
-Phase I Analysis: Establishes a stable "In-Control" (IC) baseline by estimating parameters from 30 initial profiles.
-Phase II Monitoring: Performs real-time monitoring of new incoming profiles to detect process disturbances, specifically shifts in the slope ($\beta_1$).
-Hotelling’s $T^2$ Control Chart: Utilizes a multivariate control chart to monitor the intercept and slope simultaneously.
-Visualization: Generates clear, professional plots using ggplot2 to visualize Phase I stability and Phase II out-of-control signals.
+- Phase I Analysis: Establishes a stable "In-Control" (IC) baseline by estimating parameters from 30 initial profiles.
+- Phase II Monitoring: Performs real-time monitoring of new incoming profiles to detect process disturbances, specifically shifts in the slope ($\beta_1$).
+- Hotelling’s $T^2$ Control Chart: Utilizes a multivariate control chart to monitor the intercept and slope simultaneously.
+- Visualization: Generates clear, professional plots using ggplot2 to visualize Phase I stability and Phase II out-of-control signals.
 
 Code Structure
 
 The R script SQC_147972_RCode.R is organized as follows:
-Global Parameters: Sets the seed for reproducibility and defines the true IC parameters ($\beta_0 = 5, \beta_1 = 2$).
-Phase I Generation: Simulates 30 profiles, fits linear models to each, and calculates the Upper Control Limit (UCL) based on the $F$-distribution.
-Phase II Simulation: Introduces a shift in the slope (from 2.0 to 2.2) starting at profile 11 to test the sensitivity of the monitoring system.
-Results & Visualization: Plots the $T^2$ statistics against the UCL to identify exactly when the process goes "Out-of-Control".
+- Global Parameters: Sets the seed for reproducibility and defines the true IC parameters ($\beta_0 = 5, \beta_1 = 2$).
+- Phase I Generation: Simulates 30 profiles, fits linear models to each, and calculates the Upper Control Limit (UCL) based on the $F$-distribution.
+- Phase II Simulation: Introduces a shift in the slope (from 2.0 to 2.2) starting at profile 11 to test the sensitivity of the monitoring system.
+- Results & Visualization: Plots the $T^2$ statistics against the UCL to identify exactly when the process goes "Out-of-Control".
 
 Getting Started
 
